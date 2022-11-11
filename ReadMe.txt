@@ -1,5 +1,5 @@
-#Sweden Cities Database
+#Sweden Cities Database and Weather forecast
 ##Cities Population
 
 #"sv"
-##Stad befolkning - Sveriges tätorter - Sveriges största topp 10 listor
+##Stad befolkning - Sveriges största topp 10 listor - vädret i alla tätorter och jämför temperatur i 5 dagar
