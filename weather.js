@@ -1,13 +1,3 @@
-//HamburgerMenu
-const hamburger_menu = document.querySelector(".hamburger-menu");
-const container = document.querySelector(".container");
-
-hamburger_menu.addEventListener("click", () => {
-  container.classList.toggle("active");
-});
-
-//Api
-
 let weather = {
     apikey: "7e39e44542afffe07cf335a084d1a09f",
     fetchWeather: function (city) {

@@ -1,13 +1,3 @@
-const hamburger_menu = document.querySelector(".hamburger-menu");
-const container = document.querySelector(".container");
-
-hamburger_menu.addEventListener("click", () => {
-  container.classList.toggle("active");
-});
-
-
-
-
 let svCities = ["Stockholm","Göteborg", "Uppsala","Malmö","Västerås"];
 let chartColors = ["orange","red", "gray","green","maroon"];
 let svTemps = [];
@@ -32,7 +22,8 @@ for(i = 0; i< svCities.length; i++){
   weather.fetchWeather(svCities[i]);
 }
 console.log(svTemps);
-console.log(Array.isArray(svTemps))
+console.log(Array.isArray(svTemps));
+
 
 
 let ctx = document.getElementById('myChart').getContext('2d');
@@ -45,9 +36,8 @@ const myChart = new Chart(ctx, {
             label: 'Temperatur °C',
             data: [8.79, 10.21, 11.64, 8.69, 8.95],
             backgroundColor: chartColors,
-            borderColor: 'white',
-            color: 'white',
-            borderWidth: 1
+            borderColor: 'black',
+            borderWidth: .5
         }]
     },
     options: {

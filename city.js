@@ -8,10 +8,6 @@ let checkBoxEdit = document.querySelector('#checkBoxEdit');
 let checkBoxRemo = document.querySelector('#checkBoxRemo');
 let form = document.querySelector('#form');
 
-// let xValuesCity = [];
-// let yValuesPopulatin = [];
-// let chartColors = ["blue","fuchsia","gray","green","lime","maroon","navy","olive","purple","red"];
-
 //#GET
 let cities = fetch('https://avancera.app/cities/')
 
@@ -29,8 +25,6 @@ cities
     for (i = 0; i < 10; i++){
         cities.innerHTML += `<tr><th>${i+1}</th><td>${data[i].name}</td><td>${data[i].population}</td></tr>`;
 
-        // xValuesCity.push(data[i].name);
-        // yValuesPopulatin.push(data[i].population);
     }
 });
 
@@ -232,5 +226,3 @@ function timeOut(){
       document.querySelector('#status').value = '';
       document.querySelector('#status').style.display = 'flex';
   };
-  
-

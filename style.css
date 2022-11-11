@@ -413,3 +413,10 @@ h1.temp{
 #status{
   margin-top: 5px;
 }
+
+/*tempChart*/
+
+#chart{
+  background-color: #eee;
+  border-radius: 8px;
+}
