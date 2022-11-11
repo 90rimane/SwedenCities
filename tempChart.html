@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Väderprognos - Vädret i alla lokaler och städer </title>
+    <title>Väderprognos - Jämföra temperatur i alla lokaler och städer </title>
     <meta name="author" content="Ali Mesbahi">
     <meta name="description" content="Väder för städer & tätorter i Sverige och världen">
-    <meta http-equiv="refresh" content="120">
+    <!--<meta http-equiv="refresh" content="120">-->
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.js"></script>
   </head>
   <body>
-    <main class="container">
+    <div class="container">
       <div class="navbar">
         <div class="menu">
           <h3 class="logo">Laboration 2 <span>| JSU22</span></h3>
@@ -21,7 +21,6 @@
           </div>
         </div>
       </div>
-
       <div class="main-container">
         <div class="main">
           <header>
@@ -29,32 +28,29 @@
               <div class="inner">
                 <h2 class="title">Chart</h2>
                 <p>
-                  Jämföra temperatur i 5 tätorter!
+                  Jämföra temperatur i 5 dagar!
                 </p>
-                <!--Main content-->
                 <div class="box">
                   <div class="card">
                     <div id="chart">
                       <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-                      <script src="tempChart.js" defer></script>
+                      <script src="chart.js"></script>
                     </div>
                   </div>
                 </div>
-              <!--end-->
               </div>
             </div>
           </header>
         </div>
         <div class="shadow one"></div>
         <div class="shadow two"></div>
-      </main>
-
+      </div>
       <div class="links">
         <ul>
           <li><a href="index.html" style="--i: 0.05s;">Vädret</a></li>
+          <li><a href="tempChart.html" style="--i: 0.2s;">Chart</a></li>
           <li><a href="cityPopulation.html" style="--i: 0.1s;">Städer</a></li>
           <li><a href="editCities.html" style="--i: 0.15s;">Redigera</a></li>
-          <li><a href="tempChart.html" style="--i: 0.2s;">Chart</a></li>
         </ul>
       </div>
     </div>

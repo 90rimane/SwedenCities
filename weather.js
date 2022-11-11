@@ -1,10 +1,10 @@
 let weather = {
-    apikey: "7e39e44542afffe07cf335a084d1a09f",
+    apikey: "a00f51b5282335d0f94456f3c1441f40",
     fetchWeather: function (city) {
       fetch(
         "https://api.openweathermap.org/data/2.5/weather?q=" +
           city +
-          "&units=metric&appid=7e39e44542afffe07cf335a084d1a09f"
+          "&units=metric&appid=a00f51b5282335d0f94456f3c1441f40&lang=sv"
       )
         .then((Response) => Response.json())
         .then((data) => this.displayWeather(data));
@@ -17,11 +17,14 @@ let weather = {
         const {sunrise, sunset}= data.sys; 
         const {all}= data.clouds; 
 
-        localStorage.setItem('temp', JSON.stringify(data.main.temp));  //Localstorage set
-        localStorage.setItem('speed', JSON.stringify(data.wind.speed));
+        localStorage.setItem('cityName', JSON.stringify(name));//Localstorage set
+        localStorage.setItem('temp', JSON.stringify(temp));  
+        localStorage.setItem('speed', JSON.stringify(speed));
 
-        let valueFromLocalTemp = JSON.parse(localStorage.getItem('temp')); //Localstorage get
-        let valueFromLocalSpeed = JSON.parse(localStorage.getItem('speed'));
+
+
+        let tempFromLocal = JSON.parse(localStorage.getItem('temp')); //Localstorage get
+        let speedFromLocal = JSON.parse(localStorage.getItem('speed'));
 
         document.querySelector(".city").textContent ="Vädret i "+ name; 
         document.querySelector(".temp").innerHTML= temp +" °C";   
@@ -35,8 +38,8 @@ let weather = {
         document.querySelector(".temp-max").innerHTML= "Temperatur-max: " + temp_max +" °C";   
         document.querySelector(".all-clouds").innerHTML= "Moln: " +all+ " %";  
 
-        document.querySelector('.localValueTemp').innerHTML = "Senaste Temperatur: " +valueFromLocalTemp+ " °C"; 
-        document.querySelector('.localValueSpeed').innerHTML = "Senaste Lufttryck: " +valueFromLocalSpeed+ " km/h";
+        document.querySelector('.localValueTemp').innerHTML = "Senaste Temperatur: " +tempFromLocal+ " °C"; 
+        document.querySelector('.localValueSpeed').innerHTML = "Senaste Lufttryck: " +speedFromLocal+ " km/h";
         
         document.querySelector(".weather").classList.remove("loading");
       },

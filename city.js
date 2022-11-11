@@ -24,7 +24,6 @@ cities
     const cities = document.querySelector(".table");
     for (i = 0; i < 10; i++){
         cities.innerHTML += `<tr><th>${i+1}</th><td>${data[i].name}</td><td>${data[i].population}</td></tr>`;
-
     }
 });
 
