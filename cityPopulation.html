@@ -6,9 +6,9 @@
     <title>Stad befolkning - Sveriges tätorter - Sveriges största topp 10 listor </title>
     <meta name="author" content="Ali Mesbahi">
     <meta name="description" content="Sweden cities database - cities and population">
-    <!--<meta http-equiv="refresh" content="60">-->
     <link rel="stylesheet" href="style.css"/>
     <script src="main.js" defer></script>
+    <script src="city.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -28,6 +28,12 @@
                 <h2 class="title">Tätort befolkning</h2>
                 <p>Sveriges största topp 10 listor</p>
                 <div class="card">
+                  <form id="form" style="display: none;">
+                    <input id="checkBoxAdd" type="checkbox">
+                    <input id="checkBoxEdit" type="checkbox">
+                    <input id="checkBoxRemo" type="checkbox">
+                    <input id="sendCity" type="submit" value="Skicka">
+                </form>
                     <table class="table">
                         <tr id="trHead">
                           <th>#</th>
@@ -52,6 +58,6 @@
         </ul>
       </div>
     </div>
-    <script src="city.js"></script>
+
   </body>
 </html>

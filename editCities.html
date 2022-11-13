@@ -8,7 +8,7 @@
     <meta name="description" content="Sweden cities database - cities and population">
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-
+    <script src="city.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -28,6 +28,7 @@
                 <h2 class="title"> Stad befolkning</h2>
                 <p>Här man kan Tillägga/Redigera/Ta bort en tätort!</p>
                 <div class="card">
+                  <table class="table" style="display: none;"></table>
                     <form id="form">
                         <label><input id="checkBoxAdd" type="checkbox"><span> lägg till en tätort</span></label>
                         <label><input id="checkBoxEdit" type="checkbox"><span> Redigera en tätort</span></label>
@@ -64,6 +65,6 @@
         </ul>
       </div>
     </div>
-    <script src="city.js"></script>
+    
   </body>
 </html>

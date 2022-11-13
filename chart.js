@@ -20,7 +20,7 @@ let forecast = {
         let ctx = document.getElementById('myChart').getContext('2d');
 
         const myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'line',
             data: {
                 labels: cityDays,
                 datasets: [{
@@ -28,15 +28,8 @@ let forecast = {
                     data: daysTemp,
                     backgroundColor: chartColors,
                     borderColor: 'black',
-                    borderWidth: .5
+                    borderWidth: 1
                 }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
             }
         });
       });
