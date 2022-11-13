@@ -21,8 +21,6 @@ let weather = {
         localStorage.setItem('temp', JSON.stringify(temp));  
         localStorage.setItem('speed', JSON.stringify(speed));
 
-
-
         let tempFromLocal = JSON.parse(localStorage.getItem('temp')); //Localstorage get
         let speedFromLocal = JSON.parse(localStorage.getItem('speed'));
 

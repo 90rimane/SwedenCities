@@ -146,43 +146,42 @@ function timeOut(){
   //   let checkBoxes = document.getElementsByTagName('input[type="checkbox"]');
   //   for(i = 0; i< checkBoxes.length; i++){
   //     if(checks[i].checked ){
-
+  //        
   //     }
   //   }
   // }
 
   function change(){
     
-    if(checkBoxAdd.checked){
-        cityId.disabled = true;
-        cityName.disabled = false;
-        cityPopular.disabled = false;
-        cityId.value = "";
-        document.querySelector('#sendCity').disabled = false;
-
-        checkBoxEdit.checked = false;
-        checkBoxRemo.checked = false;
-    }
-    if(checkBoxEdit.checked){
-        cityId.disabled = false;
-        cityName.disabled = false;
-        cityPopular.disabled = false;
-        document.querySelector('#sendCity').disabled = false;
-        checkBoxAdd.checked = false;
-        checkBoxRemo.checked = false;
-    }
-    if(checkBoxRemo.checked){
-        cityId.disabled = false;
-        cityName.disabled = true;
-        cityPopular.disabled = true;
-        cityName.value = "";
-        cityPopular.value = "";
-        document.querySelector('#sendCity').disabled = false;
-        checkBoxAdd.checked = false;
-        checkBoxEdit.checked = false;
-    }else{
-        document.querySelector('#sendCity').disabled = false;
-    }
+      if(checkBoxAdd.checked){
+          cityId.disabled = true;
+          cityName.disabled = false;
+          cityPopular.disabled = false;
+          cityId.value = "";
+          document.querySelector('#sendCity').disabled = false;
+          checkBoxEdit.checked = false;
+          checkBoxRemo.checked = false;
+      }
+      if(checkBoxEdit.checked){
+          cityId.disabled = false;
+          cityName.disabled = false;
+          cityPopular.disabled = false;
+          document.querySelector('#sendCity').disabled = false;
+          checkBoxAdd.checked = false;
+          checkBoxRemo.checked = false;
+      }
+      if(checkBoxRemo.checked){
+          cityId.disabled = false;
+          cityName.disabled = true;
+          cityPopular.disabled = true;
+          cityName.value = "";
+          cityPopular.value = "";
+          document.querySelector('#sendCity').disabled = false;
+          checkBoxAdd.checked = false;
+          checkBoxEdit.checked = false;
+      }else{
+          document.querySelector('#sendCity').disabled = false;
+      }
   }
 
   function clickChange(e){
@@ -195,6 +194,9 @@ function timeOut(){
     }
     if(checkBoxRemo.checked){
         deleteCity.delete();
+    }else{
+      timeOut(); 
+      document.querySelector('#status').innerHTML = "Markera en kryssruta!";
     }
 
     cityId.value ="";
@@ -217,6 +219,9 @@ function timeOut(){
       }
       if(checkBoxRemo.checked){
             deleteCity.delete();
+      }else{
+        timeOut(); 
+        document.querySelector('#status').innerHTML = "Markera en kryssruta!";
       }
       cityId.value ="";
       cityName.value ="";
