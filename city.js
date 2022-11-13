@@ -79,7 +79,7 @@ let patchCity = {
         method: 'PATCH'
       })
         .then((Response) => {
-          timeOut();    //start time out comment first(success and error)
+          timeOut();    //set time out for status
             if(Response.ok){
                 document.querySelector('#status').innerHTML = `Status: ${Response.status} :)`;
                 return Response.json()
@@ -141,15 +141,6 @@ function timeOut(){
   checkBoxEdit.addEventListener("input", change);
   checkBoxRemo.addEventListener("input", change);
   document.querySelector('#sendCity').disabled = true;
-
-  // function checkUncheck(){
-  //   let checkBoxes = document.getElementsByTagName('input[type="checkbox"]');
-  //   for(i = 0; i< checkBoxes.length; i++){
-  //     if(checks[i].checked ){
-  //        
-  //     }
-  //   }
-  // }
 
   function change(){
     
