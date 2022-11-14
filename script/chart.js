@@ -35,7 +35,6 @@ let forecast = {
       });
   },
   displayForecast: function(data){ 
-
     for(i=0; i < 5; i++){
       const {temp}= data.list[i].main;
       daysTemp.push(temp);

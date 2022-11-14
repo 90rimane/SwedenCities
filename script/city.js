@@ -128,8 +128,8 @@ let deleteCity = {
 
 function timeOut(){
   setTimeout(() => {
-    document.querySelector('#status').style.display = 'none';
     document.querySelector('#status').value = '';
+    document.querySelector('#status').style.display = 'none';
   }, 5000); // hide element after 5 seconds
 
 }
@@ -187,7 +187,7 @@ function timeOut(){
         deleteCity.delete();
     }else{
       timeOut(); 
-      document.querySelector('#status').innerHTML = "Markera en kryssruta!";
+      document.querySelector('#status').innerHTML = "Det gick inte:( Markera en kryssruta!";
     }
 
     cityId.value ="";
